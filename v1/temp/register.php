@@ -1,4 +1,4 @@
-<?php include("header.php");
+<?php
 	// define variables and set to empty 
 	session_start();
 	include("modif.php");
@@ -60,36 +60,17 @@
 		return $data;
 	}
 ?>
-
-<div class="content">
-	<h1>Inscription</h1>
-Avec achiev vous aurez acces a des milliers d'offres de missions pour gagner de l'argent et de l'experience.
-
+<h2>Formulaire d'inscription</h2>
 <p><span class="error">* required field.</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])."?page=inscription_etudiant";?>">
-	<p>
-		<label for="nom" >Votre nom : </label>
-		<input type="text" name="nom" value="<?php echo $nom;?>" />
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])."?page=register";?>">
+	<label>Nom: </label><input type="text" name="nom" value="<?php echo $nom;?>"/>
 		<span class="error">* <?php echo $nameErr;?></span>
-		<br/>
-		<label for="prenom" >Votre prenom : </label>
-		<input type="text" name="prenom" value="<?php echo $prenom;?>"/>
-		<br/>
-		<label for="email" >Votre email : </label>
-		<input type="text" name="email" value="<?php echo $email;?>"/>
-		<span class="error">* <?php echo $emailErr;?></span>
-		<br/>
-		<label for="passwd" >Mot de passe : </label>
-		<input type="password" name="passwd" value="<?php echo $passwd;?>"/>
+	<label>Prénom: </label><input type="text" name="prenom"value="<?php echo $prenom;?>"/>
+	<label>Password: </label><input type="password" name="passwd" value="<?php echo $passwd;?>"/>
 		<span class="error">* <?php echo $passwdErr;?></span>
-		<br/>
-		<label for="passwd2" >Confirmez le mot de passe : </label>
-		<input type="password" name="passwd2" value="<?php echo $passwd2;?>"/>
+	<label>Confirm password: </label><input type="password" name="passwd2" value="<?php echo $passwd2;?>"/>
 		<span class="error">* <?php echo $passwd2Err;?></span>
-		<br/>
-		<input type="submit" value="Rejoignez Achiev" />
-	</p>
+	<label>E-mail: </label><input type="text" name="email" value="<?php echo $email;?>"/>
+		<span class="error">* <?php echo $emailErr;?></span>
+	<input type="submit" value="M'inscrire"/>
 </form>
-</div>
-
-<?php include("footer.php"); ?>

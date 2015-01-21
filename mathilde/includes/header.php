@@ -20,22 +20,9 @@
 <!-- Voir pourquoi le lien change la taille-->
 
 <!-- Si pas connecter : -->
-		<?php
-		session_start(); 
-			if (isset($_SESSION['loggued_on_user']))
-			{
-				echo "<ul class=\"deroulant\">";
-				echo "<div class=\"bouton\">Deconnection</div></a>";
-				echo "</ul>";
-				//session_unset();
-				//session_destroy();
-			}
-			else
-			{
-				echo "<ul class=\"deroulant\">";
-				echo "<a href=\"./includes/login.php\"><div class=\"bouton\">Connection</div></a>";
-				echo "</ul>";
-			}
-		?>
+			<ul class="deroulant">
+			<div class="bouton">Connection</div>
+			</ul>
+
 <!-- Sinon afficher deconnection -->
 		</header>

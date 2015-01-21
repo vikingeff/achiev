@@ -1,8 +1,8 @@
 <?php include("includes/header.php");
 try
 {
-	mysql_connect("db561556877.db.1and1.com:3306","dbo561556877","Achi3vr"); // Connexion à la base de données
-	mysql_select_db("db561556877");
+	mysql_connect("localhost", "root", "root"); // Connexion à la base de données
+	mysql_select_db("Achiev");
 }
 catch (Exception $e)
 {
