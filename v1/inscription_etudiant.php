@@ -1,7 +1,7 @@
-<?php include("header.php");
+<?php include("./includes/header.php");
 	// define variables and set to empty 
 	session_start();
-	include("modif.php");
+	include("./includes/modif.php");
 	$nom = $prenom = $passwd = $passwd2 = $email = "";
 	$nameErr = $emailErr = $passwdErr = $passwd2Err = "";
 
@@ -92,4 +92,4 @@ Avec achiev vous aurez acces a des milliers d'offres de missions pour gagner de 
 </form>
 </div>
 
-<?php include("footer.php"); ?>
+<?php include("./includes/footer.php"); ?>

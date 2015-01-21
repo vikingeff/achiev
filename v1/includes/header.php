@@ -22,13 +22,14 @@
 <!-- Si pas connecter : -->
 		<?php
 		session_start(); 
-			if (isset($_SESSION['loggued_on_user']))
+			if (isset($_SESSION['loggued_on_user']) && $_SESSION['loggued_on_user'] !== "")
 			{
 				echo "<ul class=\"deroulant\">";
-				echo "<div class=\"bouton\">Deconnection</div></a>";
+				echo "<div class=\"bouton\">".$_SESSION['loggued_on_user']."</div></a>";
+				echo "<ul>";
+				echo "<li><a href=\"./includes/signout.php\">Deconnection</a></li>";
 				echo "</ul>";
-				//session_unset();
-				//session_destroy();
+				echo "</ul>";
 			}
 			else
 			{

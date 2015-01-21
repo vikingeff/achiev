@@ -1,13 +1,5 @@
-<?php
+<?php //include("header.php");
 	session_start();
-	function exit_ret($con, $ret)
-	{
-		mysqli_close($con);
-		if ($ret === -1)
-			return (FALSE);
-		else
-			return (TRUE);
-	}
 	function auth($login, $passwd)
 	{
 		// if (!isset($passwd) && !isset($login))
@@ -26,16 +18,18 @@
 		if ($row['password_student'] !== $passwd)
 			$ret = -1;
 		$_SESSION['backupid']=$row['id_student'];
-		return (exit_ret($con, $ret));
+		return ($ret);
 	}
 
 	$login = $_POST['login'];
 	$passwd = $_POST['passwd'];
-	if (auth($login, $passwd) !== TRUE)
+	if (auth($login, $passwd) !== 1)
 	{
 		$_SESSION['loggued_on_user'] = "";
-		header("Location: index.php?page=signing&user=failed");
-		exit("ERROR\n");
+		//header("Location: index.php?page=signing&user=failed");
+		// header("Location: ../index.php");
+		// die();
+		// exit("ERROR\n");
 	}
 	else
 	{
@@ -45,8 +39,9 @@
 		// $row = mysqli_fetch_array($res);
 		$_SESSION['loggued_on_user'] = $login;
 		// $_SESSION['is_admin'] = $row['is_admin'];
-		//header("Location: ../index.php");
-		include("../index.php");
+		header("Location: http://achiev.geffman.fr/geff");
+		die();
 		exit("OK\n");
 	}
+	//header("Location: index.php");
 ?>
