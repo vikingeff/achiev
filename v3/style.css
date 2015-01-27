@@ -33,6 +33,7 @@ header
 	z-index: 1000;
 	height: 80px;
 	width:100%;
+	background-color: rgb(251, 251, 253);
 	background-image: url(img/head.png);
 	background-size: 100%;
 	background-position: top;
@@ -269,12 +270,129 @@ footer p
 	letter-spacing: 1px;
 }
 
+/** Student header (+ Entreprise header ?) **/
+#stud
+{
+	text-align: center;
+	font-family: "din light", Helvetica;
+	font-size: 14px;
+	color: rgb(124, 0, 66);
+}
+#stud #headpicto
+{
+	height: 80px;
+	position: relative;
+	top: 30px;
+}
+#stud h1
+{
+	width: 100%;
+	background-color: #f4f1eb;
+	padding: 40px 0px 30px 0px;
+	font-family: "din";
+	font-size:16px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+#stud h1 > #trait
+{
+	height: 1px;
+	width: 30px;
+	margin: 0px 40px 2px 40px;
+}
+.etape
+{
+	background-color: rgb(251, 251, 253);
+	font-family: "din medium", Helvetica;
+	font-size: 18px;
+	padding: 20px;
+}
+.etape #trait
+{
+	position: relative;
+	top: 25px;
+	width: 20px;
+	height: 1px;
+}
+.tuto
+{
+	background-color: #f4f1eb;
+	padding: 30px 20px 20px 20px;
+	font-family: "din light", Helvetica;
+	text-transform: uppercase;
+	line-height: 20px;
+	font-size: 12px;
+}
+.tuto .picto
+{
+	height: 40px;
+	margin-top: 20px;
+}
+.blk
+{
+	display: inline-block;
+	width: 30%;
+}
+#stud h3
+{
+	display: inline-block;
+	width: 200px;
+	background-color: rgb(124, 0, 66);
+	color: white;
+	padding: 20px;
+	text-transform: uppercase;
+	font-family: "din light", Helvetica;
+	letter-spacing: 1px;
+	font-size: 12px;
+	margin: 40px;
+}
+
+.lst_annonce
+{
+	background-color: #f4f1eb;
+	color: rgb(124, 0, 66);
+	text-align: center;
+}
+.lst_annonce h1
+{
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 22px;
+	font-family: "din light", Helvetica;
+	letter-spacing: 1px;
+	background-color: rgb(251, 251, 253);
+	padding: 30px 0px 40px 0px;
+}
+.title
+{
+	background-color: rgb(124, 0, 66);
+	margin-top: -20px;
+	padding: 15px 0px 20px 0px;
+}
+.title img
+{
+	width: 20px;
+	height: 20px;
+	margin-bottom: 10px;
+}
+.title .exmission
+{
+	color: white;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: "din", Helvetica;
+}
+.ann
+{
+	padding: 15px 0px 20px 0px;
+}
 /** PopUp **/
 #lean_overlay {
     position: fixed;
+    top: -20px;
     z-index:100;
     left: 0px;
-    height:100%;
+    height:110%;
     width:100%;
     background: #f4f1eb;
     display: none;
@@ -284,6 +402,7 @@ footer p
 	display: none;
 	position:absolute;
 	width:500px;
+	height: auto;
 	max-height: 65%;
 	left:45%;
 	background: #FFF;
@@ -357,36 +476,68 @@ a.btn
 .user_login
 {
 	display: inline-block;
-	float: left;
-	width: 45%;
-	padding-bottom: 20px;
+	width: 100%;
+	padding-bottom: 10px;
+}
+.user_login label
+{
+	display: inline-block;
+	width: 200px;
+	padding: 10px;
+	margin-bottom: 20px;
+	background-color: rgb(124, 0, 66);
+	color: #f4f1eb;
+	position: relative;
+	left: 5px;
 }
 .user_login input[type="text"], .user_login input[type="email"], .user_login input[type="password"]
 {
-	display: block;
-	width: 100%;
-	margin-top: 10px;
-	padding: 10px;
+	display: inline-block;
+	width: 225px;
+	padding: 11px;
 	border:1px solid #DDD;
 	background-color: #f4f1eb;
 	color: black;
+	margin-bottom: 20px;
+}
+.user_login a
+{
+	font-family: "din", Helvetica;
+	font-size: 14px;
+	text-decoration: none;
+	display: inline-block;
+	width: 200px;
+	padding: 10px;
 }
 .forgot_password
 {
-	text-decoration: none;
-	color:rgb(124, 0, 66);
-	font-family: "din", Helvetica;
-	font-size: 14px;
+	border:1px solid #DDD;
+	background-color: #f4f1eb;
+	color: rgb(124, 0, 66);
+	position: relative;
+	left: 5px;
+}
+#validate
+{
+	background-color: rgb(124, 0, 66);
+	color: #f4f1eb;
+	width: 205px;
+	position: relative;
+	right: 4px;
+	padding: 11px;
 }
 /** Register ***/
 .user_reg
 {
 	display: inline-block;
-	float: right;
-	width: 50%;
+	width: 100%;
 	height: 230px;
 	padding-bottom: 20px;
-	border-left: 1px dashed rgba(124, 0, 66, 0.9);
+}
+.user_reg label
+{
+	text-transform: uppercase;
+	font-size: 14px;
 }
 .user_reg img
 {
@@ -394,6 +545,28 @@ a.btn
 	top: 10px;
 	margin: 3px;
 	margin-top: 0px;
+}
+.user_reg a
+{
+	display: inline-block;
+	width: 190px;
+	padding: 5px 10px 15px 10px;
+	background-color: #f4f1eb;
+	color: rgb(124, 0, 66);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	border:1px solid #DDD;
+}
+.user_reg a > img
+{
+	height: 20px;
+	margin-right: 5px;
+}
+.user_reg p
+{
+	font-size: 14px;
 }
 .action_btns a
 {
@@ -426,28 +599,6 @@ a.btn
 	margin-left:40px;
 	margin-bottom: 10px;
 }
-
-/** CRegister ***/
-.company_reg
-{
-	display: inline-block;
-	float: right;
-	width: 50%;
-	height: 230px;
-	padding-bottom: 20px;
-	border-left: 1px dashed rgba(124, 0, 66, 0.9);
-}
-.company_reg img
-{
-	position: relative;
-	top: 10px;
-	margin: 3px;
-	margin-top: 0px;
-}
-.action_btns a
-{
-	display: block;
-}
 /* Company Register Form */
 .company_register
 {
@@ -475,7 +626,6 @@ a.btn
 	margin-left:40px;
 	margin-bottom: 10px;
 }
-
 .one_half
 {
 	display: inline-block;
@@ -507,28 +657,6 @@ a.btn
 	background-color: rgba(244, 241, 235, 0.8);
 }
 #co_ok
-{
-	z-index: 110;
-	position: absolute;
-	top: 100px;
-	left: 25%;
-	width: 50%;
-	background-color: rgba(124, 0, 66, 0.9);
-	color: rgb(244, 241, 235);
-	text-align: center;
-	font-family: "din", Helvetica;
-	font-size: 16px;
-	padding: 20px;
-}
-#nok
-{
-	z-index: 1000;
-	position: fixed;
-	width: 100%;
-	height: 120%;
-	background-color: rgba(244, 241, 235, 0.8);
-}
-#co_nok
 {
 	z-index: 110;
 	position: absolute;

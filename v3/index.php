@@ -2,8 +2,8 @@
 
 	<div id="header"> <!-- header present que sur la page index -->
 	<p>Vos missions réalisées par des étudiants.</p>
-		<a href="etudiant.php"><div class="choix"><img src="img/etudiant.png"/><p>ACCÉS ÉTUDIANTS</p></div></a>
-		<a href="client.php"><div class="choix"><img src="img/entreprise.png"/><p>ACCÉS ENTREPRISES</p></div></a>
+		<a href="etudiant.php"><div class="choix"><img src="img/etudiant.png"/><p>ACCÈS ÉTUDIANTS</p></div></a>
+		<a href="client.php"><div class="choix"><img src="img/entreprise.png"/><p>ACCÈS ENTREPRISES</p></div></a>
 	</div>
 	<div id="subheader">
 		<div class="schoix">TROUVEZ UNE MISSION</div>
@@ -27,7 +27,7 @@
 			INFORMATIQUE
 			</h2>
 			<ul>
-				<li>DEVELOPPER<br/>UNE APPLICATION MOBILE</li>
+				<li>DÉVELOPPER<br/>UNE APPLICATION MOBILE</li>
 				<img class="trait" src="img/trait.png" />
 				<li>CONCEVOIR UN SITE<br/>INTERNET</li>
 				<img class="trait" src="img/trait.png" />
@@ -55,7 +55,7 @@
 			<ul>
 				<li>RÉALISER UNE MISSION<br/>DE VENTE</li>
 				<img class="trait" src="img/trait.png" />
-				<li>FAIRE UNE ENQUETE<br/>JURIDIQUE</li>
+				<li>FAIRE UNE ENQUÊTE<br/>JURIDIQUE</li>
 				<img class="trait" src="img/trait.png" />
 				<li>RÉALISER UNE ÉTUDE<br/>DE MARCHÉ</li>
 			</ul>
@@ -64,7 +64,7 @@
 		<img class="trait" src="img/trait.png" /><br />
 		</div>
 		<p>
-		Decouvrir d'autres missions
+		Découvrir d'autres missions
 		</p>
 	</div>
 

@@ -124,7 +124,7 @@
 			else
 			{
 		?>
-			<a id="modal_trigger" href="#modal"><div class="bouton" id="codeco">CONNEXION</div></a>
+			<a class="modal_trigger" href="#modal"><div class="bouton" id="codeco">CONNEXION</div></a>
 			<div id="modal" class="popupContainer" >
 					<header class="popupHeader">
 						<span class="header_title">Connexion</span>
@@ -135,27 +135,25 @@
 						<!-- Username & Password Login form -->
 						<div class="user_login">
 							<form>
-								<label>Email</label>
+								<label>Votre Email</label>
 								<input type="text" name="login" id="login" autofocus/>
 								<br />
-								<label>Mot de passe</label>
+								<label>Votre Mot de passe</label>
 								<input type="password" name="passwd" id="passwd"/>
 								<br />
-								<div class="action_btns">
-									<a href="#" id="validate" class="btn_red">Connexion</a>
-								</div>
+								<a href="#" class="forgot_password">Mot de passe oublié ?</a>
+								<a href="#" id="validate">Connexion</a>
 							</form>
-							<a href="#" class="forgot_password">Mot de passe oublié ?</a>
 						</div>
 
 						<div class="user_reg">
 							<label>Pas encore inscrit ?</label><br/>
-							<a href="#" id="register_form" class="btn">Inscription<br/>Etudiant</a>
-							<a href="#" id="cregister_form" class="btn">Inscription<br/>Entreprise</a>
+							<a href="#" id="register_form"><img src="img/etudiant.png" />Etudiant</a>
+							<a href="#" id="cregister_form"><img src="img/entreprise.png" />Entreprise</a>
 							<br/><br/>
-							<label style="font-size:14px; font-family:'din medium';">Prochainement : <br/>inscription via </label>
-							<img src="img/fb.png" width=35px />
-							<img src="img/lkdin.png" width=35px />
+							<p>Prochainement, inscrivez-vous via :<br/>
+							<img src="img/fb.png" width=25px />
+							<img src="img/lkdin.png" width=25px /></p>
 						</div>
 
 						<!-- Register Form -->
@@ -196,22 +194,22 @@
 							<form method="post" action="#">
 								<p>
 								<label for="nom" >Nom de votre société :
-								<span class="error">* <?php echo $nameErr;?></span></label>
+								<span class="error">* <?php echo $namecErr;?></span></label>
 								<input type="text" name="name" value="<?php echo $nom;?>" />
 								<br/>
 								<label for="prenom" >Votre numéro de Siret : </label>
 								<input type="text" name="siret" value="<?php echo $prenom;?>"/>
 								<br/>
 								<label for="email" >Votre email :
-								<span class="error">* <?php echo $emailErr;?></span></label>
+								<span class="error">* <?php echo $cmailErr;?></span></label>
 								<input type="text" name="cmail" value="<?php echo $email;?>"/>
 								<br/>
 								<label for="passwd" >Mot de passe :
-								<span class="error">* <?php echo $passwdErr;?></span> </label>
+								<span class="error">* <?php echo $cpasswdErr;?></span> </label>
 								<input type="password" name="cpasswd" value=""/>
 								<br/>
 								<label for="passwd2" >Confirmez le mot de passe :
-								<span class="error">* <?php echo $passwd2Err;?></span></label>
+								<span class="error">* <?php echo $cpasswd2Err;?></span></label>
 								<input type="password" name="cpasswd2" value=""/>
 								<br/>
 								<p style="font-size:14px; text-align: right;">
@@ -225,76 +223,6 @@
 						</div>
 					</section>
 				</div>
-		<script type="text/javascript">
-				$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
-
-				$(function(){
-					// Calling Register Form
-					$("#register_form").click(function(){
-						$(".user_register").show();
-						$(".company_register").hide();
-						$(".user_login").hide();
-						$(".user_reg").hide();
-						$(".header_title").text('Inscription etudiant');
-						return false;
-					});
-
-					// Calling Company Register Form 
-					$("#cregister_form").click(function(){
-						$(".company_register").show();
-						$(".user_register").hide();
-						$(".user_login").hide();
-						$(".user_reg").hide();
-						$(".header_title").text('Inscription entreprise');
-						return false;
-					});
-
-					// Going back to Social Forms
-					$(".back_btn").click(function(){
-						$(".user_login").show();
-						$(".user_reg").show();
-						$(".company_register").hide();
-						$(".user_register").hide();
-						$(".header_title").text('Connexion');
-						return false;
-					});
-
-					//Account creation ok
-					$("#ok").click(function(){
-						$("#co_ok").hide();
-						$("#ok").hide();
-						return false;
-					});
-
-					//Account creation nok
-					$("#nok").click(function(){
-						$("#co_nok").hide();
-						$("#nok").hide();
-						$(".user_register").show();
-						$(".user_login").hide();
-						$(".user_reg").hide();
-						$(".header_title").text('Inscription etudiant');
-						return false;
-					});
-
-					//validate login
-					$("#validate").click(function(){
-
-						location.reload();
-						$(".user_login").hide();
-						$(".user_register").hide();
-						$(".company_register").hide();
-						$(".social_login").hide();
-						$.post('includes/signing.php', {login:$("#login").val(), passwd:$("#passwd").val()});
-						$("#modal").hide();
-						$("#lean_overlay").fadeOut(200);
-			                $(modal_id).css({
-			                    "display": "none"
-			                })
-						return false;
-					});
-
-				})
-			</script>
 		<?php } ?>
+			
 		</header>
