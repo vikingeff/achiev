@@ -12,69 +12,152 @@
 <?php	include("./includes/modif.php");
 	$nom = $prenom = $passwd = $passwd2 = $email = "";
 	$nameErr = $emailErr = $passwdErr = $passwd2Err = "";
-	$name = $siret = $cpasswd = $cpasswd2 = $cmail = "";
-	$namecErr = $cmailErr = $cpasswdErr = $cpasswd2Err = "";
+	$name = $siret = $cpasswd = $cpasswd2 = $cmail = $enom = $eprenom = "";
+	$namecErr = $lnamecErr = $fnamecErr = $cmailErr = $cpasswdErr = $cpasswd2Err = "";
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST")
 	{
-		if (empty($_POST["nom"]))
-			$nameErr = "Name is required";
-		else
+		if (empty($_POST["siret"]))
 		{
-			$nom = test_input($_POST["nom"]);
-			if (!preg_match("/^[a-zA-Z \-]*$/",$nom))
-				$nameErr = "Only letters, white space and - are allowed";
-		}					
-		$prenom = test_input($_POST["prenom"]);
-		if (empty($_POST["passwd"]))
-			$passwdErr = "You must specify a password";
-		else if (empty($_POST["passwd"]))
-			$passwd2Err = "Passwords don't match";
-		else
-		{
-			$passwd = test_input($_POST["passwd"]);
-			$passwd2 = test_input($_POST["passwd2"]);
-			if (strcmp($passwd, $passwd2) !== 0)
+			if (empty($_POST["nom"]))
+				$nameErr = "Name is required";
+			else
+			{
+				$nom = test_input($_POST["nom"]);
+				if (!preg_match("/^[a-zA-Z \-]*$/",$nom))
+					$nameErr = "Only letters, white space and - are allowed";
+			}					
+			$prenom = test_input($_POST["prenom"]);
+			if (empty($_POST["passwd"]))
+				$passwdErr = "You must specify a password";
+			else if (empty($_POST["passwd2"]))
 				$passwd2Err = "Passwords don't match";
 			else
 			{
-				$passwd = hash("whirlpool", test_input($_POST["passwd"]));
-				$passwd2 = hash("whirlpool", test_input($_POST["passwd2"]));
+				$passwd = test_input($_POST["passwd"]);
+				$passwd2 = test_input($_POST["passwd2"]);
+				if (strcmp($passwd, $passwd2) !== 0)
+					$passwd2Err = "Passwords don't match";
+				else
+				{
+					$passwd = hash("whirlpool", test_input($_POST["passwd"]));
+					$passwd2 = hash("whirlpool", test_input($_POST["passwd2"]));
+				}
+				if (!preg_match("/^[a-zA-Z0-9]*$/",$passwd))
+					$passwdErr = "Password can only contain letters and number, yes i know life sucks";
 			}
-			if (!preg_match("/^[a-zA-Z0-9]*$/",$passwd))
-				$passwdErr = "Password can only contain letters and number, yes i know life sucks";
+			if (empty($_POST["email"]))
+				$emailErr = "E-mail is required";
+			else
+			{
+				$email = test_input($_POST["email"]);
+				if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email))
+					$emailErr = "Invalid email format";
+				if (exist_mail($email))
+					$emailErr = "Mail already used.";
+			}
+			if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($nameErr) && empty($emailErr) && empty($passwdErr) && empty($passwd2Err))
+			{
+				include ("./includes/modif.php");
+				include ("./includes/validation.php");
+				mysqli_close($con);
+				?>
+				<div id="ok"><div id="co_ok">
+				<?php echo "Votre compte a bien été créé. Vous pouvez maintenant vous connecter.<br/>
+					Cliquez pour fermer la fenetre"."\n"; ?>
+				</div></div>
+				<?php
+				header("location:index.php");
+			}
+			else
+			{
+				echo $siret;
+				?>
+				<div id="nok"><div id="co_nok">
+				<?php echo "Une erreur est survenue."."\n"; ?>
+				</div></div>
+				<?php
+				header("location:index.php");
+			}
 		}
-		if (empty($_POST["email"]))
-			$emailErr = "E-mail is required";
 		else
 		{
-			$email = test_input($_POST["email"]);
-			if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email))
-				$emailErr = "Invalid email format";
-			if (exist_mail($email))
-				$emailErr = "Mail already used.";
-		}
-		if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($nameErr) && empty($emailErr) && empty($passwdErr) && empty($passwd2Err))
-		{
-			include ("./includes/modif.php");
-			include ("./includes/validation.php");
-			mysqli_close($con);
-			?>
-			<div id="ok"><div id="co_ok">
-			<?php echo "Votre compte a bien été créé. Vous pouvez maintenant vous connecter.<br/>
-				Cliquez pour fermer la fenetre"."\n"; ?>
-			</div></div>
-			<?php
-			header("location:index.php");
-		}
-		else
-		{
-			?>
-			<div id="nok"><div id="co_nok">
-			<?php echo "Une erreur est survenue."."\n"; ?>
-			</div></div>
-			<?php
-			header("location:index.php");
+			if (empty($_POST["name"]))
+				$namecErr = "Company name is required";
+			else
+			{
+				$name = test_input($_POST["name"]);
+				if (!preg_match("/^[a-zA-Z \-]*$/",$nom))
+					$nameErr = "Only letters, white space and - are allowed";
+			}
+			if (empty($_POST["siret"]))
+				$siretErr = "Company siret is required";
+			else
+			{
+				$siret = test_input($_POST["siret"]);
+				if (!preg_match("/^[0-9]*$/",$nom))
+					$nameErr = "Siret countains only numbers";
+			}
+			if (empty($_POST["lname"]))
+				$lnamecErr = "Your name is required";
+			else
+			{
+				$enom = test_input($_POST["lname"]);
+				if (!preg_match("/^[a-zA-Z \-]*$/",$nom))
+					$nameErr = "Only letters, white space and - are allowed";
+			}			
+			$eprenom = test_input($_POST["fname"]);
+			if (empty($_POST["cpasswd"]))
+				$cpasswdErr = "You must specify a password";
+			else if (empty($_POST["cpasswd2"]))
+				$cpasswd2Err = "Passwords don't match";
+			else
+			{
+				$passwd = test_input($_POST["cpasswd"]);
+				$passwd2 = test_input($_POST["cpasswd2"]);
+				if (strcmp($cpasswd, $cpasswd2) !== 0)
+					$passwd2Err = "Passwords don't match";
+				else
+				{
+					$cpasswd = hash("whirlpool", test_input($_POST["cpasswd"]));
+					$cpasswd2 = hash("whirlpool", test_input($_POST["cpasswd2"]));
+				}
+				if (!preg_match("/^[a-zA-Z0-9]*$/",$cpasswd))
+					$passwdErr = "Password can only contain letters and number, yes i know life sucks";
+			}
+			if (empty($_POST["cmail"]))
+				$emailErr = "E-mail is required";
+			else
+			{
+				$cmail = test_input($_POST["cmail"]);
+				if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$cmail))
+					$emailErr = "Invalid email format";
+				if (exist_mail($cmail))
+					$emailErr = "Mail already used.";
+			}
+			if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($namecErr) && empty($siretErr) && empty($lnamecErr) && empty($cmailErr) && empty($passwdErr) && empty($passwd2Err))
+			{
+				include ("./includes/modif.php");
+				include ("./includes/enterprise.php");
+				mysqli_close($con);
+				?>
+				<div id="ok"><div id="co_ok">
+				<?php echo "Votre entreprise a bien été créée. Vous pouvez maintenant vous connecter.<br/>
+					Cliquez pour fermer la fenetre"."\n"; ?>
+				</div></div>
+				<?php
+				header("location:index.php");
+			}
+			else
+			{
+				echo $siret;
+				?>
+				<div id="nok"><div id="co_nok">
+				<?php echo "Une erreur est survenue."."\n"; ?>
+				</div></div>
+				<?php
+				header("location:index.php");
+			}
 		}
 	}
 	function test_input($data)
@@ -195,14 +278,22 @@
 								<p>
 								<label for="nom" >Nom de votre société :
 								<span class="error">* <?php echo $namecErr;?></span></label>
-								<input type="text" name="name" value="<?php echo $nom;?>" />
+								<input type="text" name="name" value="<?php echo $name;?>" />
 								<br/>
 								<label for="prenom" >Votre numéro de Siret : </label>
-								<input type="text" name="siret" value="<?php echo $prenom;?>"/>
+								<span class="error">* <?php echo $siretErr;?></span></label>
+								<input type="text" name="siret" value="<?php echo $siret;?>"/>
+								<br/>
+								<label for="nom" >Votre Nom :
+								<span class="error">* <?php echo $lnamecErr;?></span></label>
+								<input type="text" name="lname" value="<?php echo $enom;?>" />
+								<br/>
+								<label for="nom" >Votre Prénom :
+								<input type="text" name="fname" value="<?php echo $eprenom;?>" />
 								<br/>
 								<label for="email" >Votre email :
 								<span class="error">* <?php echo $cmailErr;?></span></label>
-								<input type="text" name="cmail" value="<?php echo $email;?>"/>
+								<input type="text" name="cmail" value="<?php echo $cmail;?>"/>
 								<br/>
 								<label for="passwd" >Mot de passe :
 								<span class="error">* <?php echo $cpasswdErr;?></span> </label>
