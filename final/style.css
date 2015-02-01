@@ -1,0 +1,1140 @@
+@font-face
+{
+	font-family: "din";
+	src: url('includes/DIN.ttf');
+}
+@font-face
+{
+	font-family: "din light";
+	src: url('includes/DINLight.ttf');
+}
+@font-face
+{
+	font-family: "din bold";
+	src: url('includes/DINBold.ttf');
+}
+@font-face
+{
+	font-family: "din medium";
+	src: url('includes/DINMedium.ttf');
+}
+html, body
+{
+	margin: 0px;
+	width: 100%;
+	min-width: 810px;
+	background-color: rgb(251, 251, 253);
+	padding-top: 65px;
+	font-family: "din light", Helvetica;
+}
+
+header
+{
+	z-index: 1000;
+	height: 80px;
+	width:100%;
+	background-color: rgb(251, 251, 253);
+	background-image: url(img/head.png);
+	background-size: 100%;
+	background-position: top;
+	text-align: center;
+	font-family: "din light", Helvetica;
+	font-size: 16pt;
+	padding-top : 30px;
+	margin: 0px;
+	position: fixed;
+	top: 0px;
+}
+.bouton
+{
+	position: fixed;
+	top: 50px;
+	display: inline-block;
+	font-family: "din", Helvetica;
+	font-size: 10pt;
+	color: rgba(65, 0, 26, 1);
+	letter-spacing: 0.5px;
+}
+/** Index **/
+#header
+{
+	height: 387px;
+	width: 100%;
+	position: relative;
+	top: -22px;
+	background-image: url(img/head.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	font-family: "din light", Helvetica;
+	font-size: 16pt;
+	padding-top: 0px;
+}
+#inscription
+{
+	left: 14%;
+	height: 50px;
+}
+#codeco
+{
+	right: 14%;
+}
+.deroulant
+{
+	display: none;
+	position: absolute;
+	top: 25px;
+	width: 100px;
+	font-family: "din light", Helvetica;
+	font-size: 10pt;
+	text-align: left;
+}
+#inscription:hover .deroulant
+{
+	display:block;
+}
+.deroulant a
+{
+	text-decoration: none;
+	color: rgba(65, 0, 26, 0.7);
+}
+#header p
+{
+	padding-top: 20px;
+	color: rgba(124, 0, 66, 1);
+	font-size: 11pt;
+}
+#header .choix
+{
+	display: inline-block;
+	margin: 5px 11px 0px 11px;
+	width: 287px;
+	height: 40px;
+	background-color: rgba(239, 236, 235, 0.75);
+	color: rgba(65, 0, 26, 1);
+	position: relative;
+	padding: 15px;
+	padding-top: 34px;
+	top: 260px;
+	left: -3px;
+	font-family: "din medium", Helvetica;
+	font-size: 14pt;
+	border: 2px solid white;
+}
+.choix > img
+{
+	max-width: 35px;
+	max-height: 40px;
+	position: absolute;
+	top: 24px;
+	left: 58px;
+}
+.choix p
+{
+	display: inline;
+	position: relative;
+	left: 18px;
+	letter-spacing: 0.5px;
+}
+#subheader
+{
+	height: 180px;
+	background-color: #f4f1eb;
+	position:relative;
+	top: -22px;
+	text-align: center;
+	font-family: "din light", Helvetica;
+	font-size: 16pt;
+	color: rgba(124, 0, 66, 1);
+	margin-bottom: 70px;
+	letter-spacing: 1px;
+}
+#subheader p
+{
+	margin-top: 10px;
+	display: inline;
+	font-size: 15pt;
+	letter-spacing: 1px;
+}
+.schoix
+{
+	display: inline-block;
+	margin: 0px 10px 5px 10px;
+	width: 290px;
+	height: 22px;
+	background-color: white;
+	color: rgba(65, 0, 26, 1);
+	padding: 15px;
+	padding-top: 30px;
+	font-size: 10pt;
+	letter-spacing: 0.5px;
+}
+
+#subtitle
+{
+	text-align: center;
+	font-size: 21pt;
+	color: rgba(124, 0, 66, 1);
+	margin-bottom: 50px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+/*** Content ***/
+.content
+{
+	width: 100% - 40px;;
+	padding: 20px;
+	text-align: center;
+	background-color: #f4f1eb;
+	line-height: 140%;
+	padding-bottom: 40px;
+}
+.content h1
+{
+	height: 70px;
+	padding-top: 15px;
+	border-bottom: 3px solid white;
+	font-family: "din", Helvetica;
+	font-size: 16pt;
+	color: rgba(65, 0, 26, 1);
+	letter-spacing: 1px;
+}
+.content p
+{
+	color: rgba(65, 0, 26, 1);
+	font-size: 10pt;
+}
+#xmiss
+{
+	margin-left: 1%;
+	margin-top: 35px;
+}
+.exmission
+{
+	display: inline-block;
+	width: 27%;
+	margin: 0px 20px 0px 20px;
+	color: rgba(65, 0, 26, 1);
+}
+.exmission a
+{
+	text-decoration: none;
+	color: rgba(65, 0, 26, 1);
+}
+.exmission h2
+{
+	font-family: "din", Helvetica;
+	width: 90%;
+	font-size: 18px;
+	color: rgba(124, 0, 66, 1);
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 3px solid white;
+	letter-spacing: 0.5px;
+}
+.exmission h2 > img
+{
+	margin: 30px;
+	margin-top: 20px;
+	height: 45px;
+}
+.exmission ul
+{
+	padding: 0px;
+}
+.exmission li
+{
+	position: relative;
+	left: -15px;
+	list-style-type: none;
+	letter-spacing: 0.5px;
+}
+.trait
+{
+	position: relative;
+	left: -15px;
+	margin: 20px;
+	width: 25px;
+}
+.picture
+{
+	display: inline-block;
+	width: 600px;
+	height: 150px;
+	background-image: url('photo/1.jpg');
+	background-size: 100%;
+	background-position: center;
+	margin: 20px;
+}
+.insight
+{
+	display: inline-block;
+	width: 60%;
+	font-family: "din light", Helvetica;
+	font-size: 16px;
+	color: rgba(124, 0, 66, 0.7);
+	text-transform: uppercase;
+}
+.insight p
+{
+	display: inline-block;
+	font-family: "din", Helvetica;
+	font-size: 16px;
+	color: rgba(124, 0, 66, 1);
+	text-transform: uppercase;
+}
+
+/** Page Profil **/
+
+.head_profil
+{
+	padding: 10px;
+	background-color: rgb(124, 0, 66);
+	text-align: center;
+	font-family: "din", Helvetica;
+	color : white;
+}
+.head_profil h1
+{
+	text-transform: uppercase;
+	font-size : 14px;
+}
+.head_profil .blk
+{
+	display: inline-block;
+	width: 30%;
+	font-family: "din light", Helvetica;
+	font-size: 12px;
+	line-height: 18px;
+}
+.blk .wtr
+{
+	display: inline-block;
+	background-color: white;
+	width: 20px;
+	height: 1px;
+	margin-bottom: 10px;
+}
+.head_profil .contact
+{
+	text-align : left;
+}
+.head_profil .perso
+{
+	text-align : right;
+}
+
+.content_profil
+{
+	text-align : center;
+	font-family : "din light", Helvetica;
+	text-transform: uppercase;
+	color: rgb(124, 0, 66);
+	padding: 20px;
+	min-height: 400px;
+	padding-left: 10%;
+}
+.content_profil h1
+{
+	font-family : "din", Helvetica;
+}
+.content_profil .photo
+{
+	display: block;
+	font-size: 10px;
+	float: left;
+	width: 25%;
+}
+.content_profil .photo a
+{
+	text-decoration: none;
+	color: rgb(124, 0, 66);
+}
+.content_profil .photo #photo
+{
+	height: 300px;
+	max-width: 100%;
+}
+.content_profil .info
+{
+	position: relative;
+	top: 10px;
+	display: block;
+	float: right;
+	width: 55%;
+	margin-right: 15%;
+}
+.content_profil .info img
+{
+	width: 20px;
+	height: 1px;
+	margin-bottom: 20px;
+}
+.content_profil .info > .case
+{
+	display: inline-block;
+	height: 150px;
+	width: 49%;
+	margin : -5px;
+	background-color: #f4f1eb;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.content_profil .info h1
+{
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+
+/** Footer **/
+footer
+{
+	text-align: center;
+	font-size: 12px;
+	height: 40px;
+	padding-top: 35px;
+	color: white;
+	background-color: rgb(124, 0, 66);
+}
+footer p
+{
+	display: inline;
+	padding: 0px 6% 0px 6%;
+	letter-spacing: 1px;
+}
+
+/** Student header (+ Entreprise header ?) **/
+#stud
+{
+	text-align: center;
+	font-family: "din light", Helvetica;
+	font-size: 14px;
+	color: rgb(124, 0, 66);
+}
+#stud #headpicto
+{
+	height: 80px;
+	position: relative;
+	top: 30px;
+}
+#stud h1
+{
+	width: 100%;
+	background-color: #f4f1eb;
+	padding: 40px 0px 30px 0px;
+	font-family: "din";
+	font-size:16px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+#stud h1 > #trait
+{
+	height: 1px;
+	width: 30px;
+	margin: 0px 40px 2px 40px;
+}
+.etape
+{
+	background-color: rgb(251, 251, 253);
+	font-family: "din medium", Helvetica;
+	font-size: 18px;
+	padding: 20px;
+}
+.etape #trait
+{
+	position: relative;
+	top: 25px;
+	width: 20px;
+	height: 1px;
+}
+.tuto
+{
+	background-color: #f4f1eb;
+	padding: 30px 20px 20px 20px;
+	font-family: "din light", Helvetica;
+	text-transform: uppercase;
+	line-height: 20px;
+	font-size: 12px;
+}
+.tuto .picto
+{
+	height: 40px;
+	margin-top: 20px;
+}
+.blk
+{
+	display: inline-block;
+	width: 30%;
+}
+#stud h3
+{
+	display: inline-block;
+	width: 200px;
+	background-color: rgb(124, 0, 66);
+	color: white;
+	padding: 20px;
+	text-transform: uppercase;
+	font-family: "din light", Helvetica;
+	letter-spacing: 1px;
+	font-size: 12px;
+	margin: 40px;
+	margin-bottom: 10px;
+}
+#stud .acces
+{
+	background-color: #f4f1eb;
+	height: 10px;
+	padding: 15px 20px 15px 20px;
+	color: rgb(124, 0, 66);
+	margin-top: 10px;
+	letter-spacing: 0.5px;
+	font-size: 10px;
+}
+#stud .acces > img
+{
+	height: 1px;
+	width: 20px;
+}
+#stud .acces > .t1
+{
+	float: left;
+	position: relative;
+	top: 5px;
+	left: -30px;
+}
+#stud .acces > .t2
+{
+	float: right;
+	position: relative;
+	top: 5px;
+	right: -30px;
+}
+.lst_annonce
+{
+	background-color: #f4f1eb;
+	color: rgb(124, 0, 66);
+	text-align: center;
+}
+.lst_annonce h1
+{
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 22px;
+	font-family: "din light", Helvetica;
+	letter-spacing: 1px;
+	background-color: rgb(251, 251, 253);
+	padding: 30px 0px 40px 0px;
+}
+.title
+{
+	background-color: rgb(124, 0, 66);
+	margin-top: -20px;
+	padding: 15px 0px 20px 0px;
+}
+.title img
+{
+	width: 20px;
+	height: 20px;
+	margin-bottom: 10px;
+}
+.title .exmission
+{
+	color: white;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: "din light", Helvetica;
+}
+.exmission h3
+{
+	color: rgb(124, 0, 66);
+	font-family: "din", Helvetica;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.exmission .prix
+{
+	display:inline-block;
+	font-family: "din medium", Helvetica;
+	margin-top: 5px;
+}
+.ann
+{
+	padding: 15px 0px 20px 0px;
+}
+/** PopUp **/
+#lean_overlay {
+    position: fixed;
+    top: -20px;
+    z-index:100;
+    left: 0px;
+    height:110%;
+    width:100%;
+    background: #f4f1eb;
+    display: none;
+}
+.popupContainer
+{
+	display: none;
+	position:absolute;
+	width:500px;
+	height: auto;
+	max-height: 65%;
+	left:45%;
+	background: #FFF;
+	font-family: "din light";
+	font-size: 18px;
+	color: rgb(124, 0, 66);
+	padding-bottom: 10px;
+	overflow-y:auto
+}
+.popupHeader
+{
+	position:relative;
+	background: rgb(124, 0, 66);
+	padding: 30px 10px 30px 10px;
+	height: 10px;
+	width: 480px;
+	color: #f4f1eb;
+	font-family: "din medium";
+	font-size:16px;
+	text-transform: uppercase;
+}
+.popupBody
+{
+	padding: 20px;
+}
+.modal_close
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 10px 15px 10px 15px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+/** bouton popup **/
+.btn_red
+{
+	background: rgba(124, 0, 66, 0.8);
+	padding: 10px 20px;
+	margin-left: 12%;
+	width: 60%;
+}
+.btn_red:hover
+{
+	background: rgba(124, 0, 66, 1);
+}
+a.btn_red
+{
+	color: #f4f1eb;
+	text-decoration: none;
+}
+.btn
+{
+	display: inline-block;
+	padding:10px 20px;
+	background: #F4F4F2;
+	width: 50%;
+	border: 1px solid rgb(124, 0, 66);
+	margin: 10px 0px 10px 0px;
+}
+a.btn
+{
+	color: rgb(124, 0, 66);
+	text-align: center;
+	text-decoration: none;
+}
+.btn:hover
+{
+	background-color: rgba(124, 0, 66, 0.1);
+}
+/** User Login Form **/
+.user_login
+{
+	display: inline-block;
+	width: 100%;
+	padding-bottom: 10px;
+}
+.user_login label
+{
+	display: inline-block;
+	width: 200px;
+	padding: 10px;
+	margin-bottom: 20px;
+	background-color: rgb(124, 0, 66);
+	color: #f4f1eb;
+	position: relative;
+	left: 5px;
+}
+.user_login input[type="text"], .user_login input[type="email"], .user_login input[type="password"]
+{
+	display: inline-block;
+	width: 225px;
+	padding: 11px;
+	border:1px solid #DDD;
+	background-color: #f4f1eb;
+	color: black;
+	margin-bottom: 20px;
+}
+.user_login a
+{
+	font-family: "din", Helvetica;
+	font-size: 14px;
+	text-decoration: none;
+	display: inline-block;
+	width: 200px;
+	padding: 10px;
+}
+.forgot_password
+{
+	border:1px solid #DDD;
+	background-color: #f4f1eb;
+	color: rgb(124, 0, 66);
+	position: relative;
+	left: 5px;
+}
+#validate
+{
+	background-color: rgb(124, 0, 66);
+	color: #f4f1eb;
+	width: 205px;
+	position: relative;
+	right: 4px;
+	padding: 11px;
+}
+/** Register ***/
+.user_reg
+{
+	display: inline-block;
+	width: 100%;
+	height: 230px;
+	padding-bottom: 20px;
+}
+.user_reg label
+{
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.user_reg img
+{
+	position: relative;
+	top: 10px;
+	margin: 3px;
+	margin-top: 0px;
+}
+.user_reg a
+{
+	display: inline-block;
+	width: 190px;
+	padding: 5px 10px 15px 10px;
+	background-color: #f4f1eb;
+	color: rgb(124, 0, 66);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	border:1px solid #DDD;
+}
+.user_reg a > img
+{
+	height: 20px;
+	margin-right: 5px;
+}
+.user_reg p
+{
+	font-size: 14px;
+}
+.action_btns a
+{
+	display: block;
+}
+/* User Register Form */
+.user_register
+{
+	display: none;
+	width: 100%;
+}
+.user_register label
+{
+	display: block;
+	margin-bottom:5px;
+}
+.user_register input[type="text"], .user_register input[type="email"], .user_register input[type="password"]
+{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	padding: 10px;
+	border:1px solid #DDD;
+	background-color: #f4f1eb;
+	color: black;
+}
+.user_register input[type="checkbox"]
+{
+	float:left;
+	margin-left:40px;
+	margin-bottom: 10px;
+}
+/* Company Register Form */
+.company_register
+{
+	display: none;
+	width: 100%;
+}
+.company_register label
+{
+	display: block;
+	margin-bottom:5px;
+}
+.company_register input[type="text"], .company_register input[type="email"], .company_register input[type="password"]
+{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	padding: 10px;
+	border:1px solid #DDD;
+	background-color: #f4f1eb;
+	color: black;
+}
+.company_register input[type="checkbox"]
+{
+	float:left;
+	margin-left:40px;
+	margin-bottom: 10px;
+}
+.one_half
+{
+	display: inline-block;
+	width: 40%;
+	position: relative;
+	top: 15px;
+	margin-bottom: 0px;
+}
+.one_half > .btn
+{
+	width: 80%;
+}
+.one_half >.btn_red
+{
+	display: inline-block;
+	width: 90%;
+	border: none;
+	color: #f4f1eb;
+	padding: 10px 20px;
+	font-family: "din light", Helvetica;
+	font-size: 18px;
+}
+#ok
+{
+	z-index: 1000;
+	position: fixed;
+	width: 100%;
+	height: 120%;
+	background-color: rgba(244, 241, 235, 0.8);
+}
+#co_ok
+{
+	z-index: 110;
+	position: absolute;
+	top: 100px;
+	left: 25%;
+	width: 50%;
+	background-color: rgba(124, 0, 66, 0.9);
+	color: rgb(244, 241, 235);
+	text-align: center;
+	font-family: "din", Helvetica;
+	font-size: 16px;
+	padding: 20px;
+}
+
+/*** Pop up annonce etudiant ***/
+#back
+{
+	position: fixed;
+	top: 0px;
+	display: block;
+	width: 200%;
+	height: 1000%;
+	background-color: rgba(244, 241, 235, 0.7);
+	text-align: center;
+}
+#pop_annonce
+{
+	position: fixed;
+	left: 5%;
+	top: 20%;
+	width: 90%;
+	min-width: 700px;
+	height: 60%;
+	background-color: #f4f1eb;
+	text-align: center;
+	border: 1px solid rgb(124, 0, 66);
+}
+#pop_annonce #close
+{
+	z-index: 1000;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	float: left;
+	width: 30px;
+	height: 17px;
+	padding: 8px 0px 17px 0px;
+	background-color: rgb(124, 0, 66);
+	color: #f4f1eb;
+	font-family: "din", Helvetica;
+	font-size: 18px;
+}
+#pop_annonce h1
+{
+	position: relative;
+	top: -10px;
+	width: 100%;
+	height: 17px;
+	background-color: rgb(124, 0, 66);
+	padding: 15px 0px 10px 0px;
+	color: #f4f1eb;
+	font-size: 15px;
+}
+/*** Popup annonce annonce ***/
+#pop_annonc
+{
+	position: fixed;
+	left: 25%;
+	top: 20%;
+	width: 50%;
+	min-width: 700px;
+	height: 60%;
+	background-color: #f4f1eb;
+	text-align: center;
+	overflow: auto;
+	padding-bottom: 10px;
+	border: 1px solid rgb(124, 0, 66);
+}
+#pop_annonc #close
+{
+	z-index: 1000;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	float: left;
+	width: 30px;
+	height: 17px;
+	padding: 8px 0px 17px 0px;
+	background-color: rgb(124, 0, 66);
+	color: #f4f1eb;
+	font-family: "din", Helvetica;
+	font-size: 18px;
+}
+#pop_annonc h1
+{
+	position: relative;
+	top: -10px;
+	width: 100%;
+	height: 17px;
+	background-color: rgb(124, 0, 66);
+	padding: 15px 0px 10px 0px;
+	color: #f4f1eb;
+	font-size: 15px;
+}
+#pop_annonc .contannonce
+{
+	text-align: left;
+	width: 80%;
+	margin: 10px 10% 10px 10%;
+	line-height: 20px;
+}
+.contannonce .desc
+{
+	width: 90%;
+	margin-left: 20px;
+}
+/**  Dashboard etudiant **/
+#dash
+{
+	display: block;
+	position: relative;
+	top: 0px;
+	width:100%;
+	min-height: 500px;
+	font-family: "din", Helvetica;
+	color: rgb(124, 0, 66);
+	text-align: center;
+}
+#dash .bilan
+{
+	display: inline-block;
+	position: absolute;
+	top: 30px;
+	left: 8%;
+	width : 300px;
+	height: 400px;
+	background-color: #f4f1eb;
+}
+
+.bilan h1
+{
+	color: rgb(124, 0, 66);
+	width: 100%;
+	border-bottom: 1px solid white;
+	font-size: 20px;
+	padding: 10px 0px 20px 0px;
+}
+
+.bilan .comp
+{
+	display:inline-block;
+	width: 80%;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: rgb(124, 0, 66);
+}
+.bilan .comp img
+{
+	height: 15px;
+	margin-right: 20px;
+	position: relative;
+	top: 5px;
+}
+.bilan .comp .barre
+{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	margin-right: 200px;
+}
+.bilan .comp .barrem
+{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: rgb(124, 0, 66);
+	margin-right: 200px;
+}
+#dash .mission_et
+{
+	display: inline-block;
+	position: absolute;
+	top: 30px;
+	right: 0px;
+	width: 50%;
+	height: 400px;
+}
+.mission_et h1
+{
+	position: relative;
+	top: -11px;
+	text-transform: uppercase;
+	background-color: rgb(124, 0, 66);
+	color: #f4f1eb;
+	width: 100%;
+	font-size: 18px;
+	padding: 20px 0px 20px 0px;
+}
+.mission_et .blo
+{
+	position: relative;
+	top: -22px;
+	height: 112px;
+}
+.mission_et img
+{
+	width: 50px;
+	position: absolute;
+	left: -25px;
+	top: 25%;
+}
+.mission_et .neco
+{
+	background-color: rgba(244, 241, 235, 0.4);
+}
+.mission_et .encours
+{
+	background-color: rgba(244, 241, 235, 0.7);
+}
+.mission_et .valid
+{
+	background-color: rgba(244, 241, 235, 1);
+}
+
+
+/*** Menu dashboard ***/
+.dash_menu
+{
+	position: relative;
+	top: -20px;
+	padding: 0px 0px 20px 0px;
+	display: block;
+	width: 100%;
+	height: 100px;
+	background-color: #f4f1eb;
+	text-align: center;
+	font-family: "din light", Helvetica;
+	font-size: 14px;
+	color: rgb(124, 0, 66);
+}
+.dash_menu a
+{
+	font-family: "din light", Helvetica;
+	font-size: 14px;
+	color: rgb(124, 0, 66);
+	text-decoration: none;
+}
+.item_menu
+{
+	display: inline-block;
+	width: 15%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.item_menu img
+{
+	height: 25px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.dash_menu .name
+{
+	font-family: "din", Helvetica;
+	text-transform: uppercase;
+}
+#center
+{
+	height: 40px;
+}
+.desc
+{
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 20px;
+}
+.search
+{
+	width: 60%;
+	position: relative;
+	top: -20px;
+	background-color: #ECE9E3;
+	padding: 20%;
+}
+.search input
+{
+	height: 50px;
+	width: 200px;
+	color: rgb(124, 0, 66);
+}
+.bout
+{
+	display: inline-block;
+	position: relative;
+	top: 9px;
+	padding: 9px;
+	background-color: rgb(124, 0, 66);
+}
+.bout img
+{
+	width: 29px;
+	height: 29px;
+}
